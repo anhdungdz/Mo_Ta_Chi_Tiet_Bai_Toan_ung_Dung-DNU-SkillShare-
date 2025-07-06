@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Đăng bài chia sẻ";
+}
+
+<div class="container mt-5">
+    <h3 class="mb-4 text-center">Đăng bài viết cần giúp đỡ</h3>
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Tiêu đề bài viết</label>
+            <input type="text" class="form-control" name="Title" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nội dung</label>
+            <textarea class="form-control" rows="5" name="Content" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng bài</button>
+        <a href="/User/Profile" class="btn btn-secondary ms-2">Quay lại</a>
+    </form>
+</div>

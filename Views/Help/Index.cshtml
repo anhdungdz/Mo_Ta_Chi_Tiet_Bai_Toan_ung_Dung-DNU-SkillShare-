@@ -1,0 +1,48 @@
+@model List<DashboardDaiNam.Models.HelpPost>
+
+@{
+    ViewData["Title"] = "Tin cần giúp đỡ";
+}
+
+<div class="content">
+    <h2 style="font-weight: bold;">Tin đăng cần giúp đỡ</h2>
+    <div style="text-align: right; margin-bottom: 10px;">
+        <button style="padding: 5px 10px; background: #ddd; border-radius: 8px;">
+            <i class="fas fa-search"></i> Tìm kiếm tin đăng cần giúp đỡ
+        </button>
+    </div>
+
+    @foreach (var post in Model)
+    {
+        <div style="background: #cfc2c2; padding: 10px; margin-bottom: 10px; border-radius: 8px;">
+            <h4 style="margin: 0;">@post.Title</h4>
+            <p style="margin: 0;">@post.Description</p>
+            <p style="font-size: 12px; color: #444;">có hậu tạ</p>
+        </div>
+    }
+
+    <hr />
+    <div style="background: #dbe8c3; padding: 15px; border-radius: 10px; display: flex; justify-content: space-between;">
+        <div>
+            <p><b>Địa chỉ:</b> 1 P. Xốm, Phú Lãm, Hà Đông, Hà Nội</p>
+            <p><b>Ngày thành lập:</b> 14 tháng 11, 2007, Hà Nội</p>
+            <p><b>Số điện thoại:</b> 024 3557 7799</p>
+            <p><b>Sản phẩm và dịch vụ:</b> <a href="https://tuyensinh.dainam.edu.vn">tuyensinh.dainam.edu.vn</a></p>
+            <p><b>Giờ hoạt động:</b> Đã đóng cửa · Mở lúc 8:00 Th 6</p>
+            <p><b>Tỉnh:</b> Hà Nội</p>
+            <p><b>Hiệu trưởng:</b> PGS.TS Đào Thị Thu Giang</p>
+            <p><b>Khẩu hiệu:</b> Học để thay đổi!</p>
+            <div style="margin-top: 10px;">
+                <img src="/images/facebook.png" width="30" />
+                <img src="/images/youtube.png" width="30" />
+                <img src="/images/tiktok.png" width="30" />
+            </div>
+        </div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps?q=Trường+Đại+Học+Đại+Nam,+Hà+Nội&output=embed"
+                width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>

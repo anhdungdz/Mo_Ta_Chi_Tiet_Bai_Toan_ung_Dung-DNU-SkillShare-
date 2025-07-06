@@ -1,0 +1,100 @@
+@{
+    ViewData["Title"] = "Thống kê tổng quan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h2 class="mt-4">Thống kê tổng quan</h2>
+
+    <!-- Các thẻ thông kê nhỏ -->
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Người dùng</h5>
+                    <p class="card-text">1.230 <small class="text-success">▲ 5.2%</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tin cần giúp đỡ</h5>
+                    <p class="card-text">314 <small class="text-success">▲ 3.8%</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tin chia sẻ</h5>
+                    <p class="card-text">217 <small class="text-danger">▼ 1.4%</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Đánh giá trung bình</h5>
+                    <p class="card-text">4.7/5 <small class="text-success">▲ 0.1%</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biểu đồ & danh sách người dùng -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header">Số lượng người dùng mới theo tháng</div>
+                <div class="card-body">
+                    <img src="/images/chart-users-month.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header">Tỷ lệ tin cần giúp đỡ</div>
+                <div class="card-body">
+                    <img src="/images/chart-helps-ratio.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Người dùng mới nhất & kết nối -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header">Người dùng mới nhất</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Nguyễn Văn A - Lập trình C - Hoạt động</li>
+                    <li class="list-group-item">Nguyễn Văn B - Giải tích - Hoạt động</li>
+                    <li class="list-group-item">Nguyễn Văn C - Tiếng Anh - Hoạt động</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header">Kết nối thành công theo thời gian</div>
+                <div class="card-body">
+                    <img src="/images/chart-connections.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer info -->
+    <div class="card bg-light mb-4">
+        <div class="card-body">
+            <h5>Địa chỉ: 1 P. Xốm, Phú Lãm, Hà Đông, Hà Nội</h5>
+            <p><strong>Ngày thành lập:</strong> 14/11/2007</p>
+            <p><strong>Điện thoại:</strong> 024 3557 7799</p>
+            <p><strong>Web:</strong> <a href="https://tuyensinh.dainam.edu.vn">tuyensinh.dainam.edu.vn</a></p>
+            <p><strong>Giờ hoạt động:</strong> Đã đóng cửa - Mở 8h - Thứ 6</p>
+            <p><strong>Hiệu trưởng:</strong> PGS.TS Đào Thị Thu Giang</p>
+            <p><strong>Khẩu hiệu:</strong> Học để thay đổi!</p>
+            <img src="/images/map-dainam.png" class="img-fluid mt-2" />
+        </div>
+    </div>
+</div>

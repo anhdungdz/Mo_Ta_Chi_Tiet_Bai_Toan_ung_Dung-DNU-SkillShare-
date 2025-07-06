@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="dashboard-content">
+    <h2>Thống kê tổng quan</h2>
+
+    <div class="stats-row">
+        <div class="stat-box">Người dùng<br><b>1.230</b></div>
+        <div class="stat-box">Tin cần giúp đỡ<br><b>314</b></div>
+        <div class="stat-box">Tin chia sẻ<br><b>217</b></div>
+        <div class="stat-box">Đánh giá TB<br><b>4.7/5</b></div>
+    </div>
+
+    <div class="charts-row">
+        <canvas id="userChart"></canvas>
+        <canvas id="helpRateChart"></canvas>
+    </div>
+
+    <div class="bottom-info">
+        <div class="info">
+            <p><b>Địa chỉ:</b> 1 P. Xốm, Phú Lãm, Hà Đông, Hà Nội<br />
+                <b>SĐT:</b> 024 3557 7799<br />
+                <b>Website:</b> tuyensinh.dainam.edu.vn</p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="150"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const userChart = new Chart(document.getElementById('userChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+            datasets: [{
+                label: 'Người dùng mới',
+                data: [5, 10, 15, 20, 25],
+                backgroundColor: 'orange'
+            }]
+        }
+    });
+
+    const helpRateChart = new Chart(document.getElementById('helpRateChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Đã giúp', 'Chưa giúp'],
+            datasets: [{
+                data: [70, 30],
+                backgroundColor: ['blue', 'lightgray']
+            }]
+        }
+    });
+</script>

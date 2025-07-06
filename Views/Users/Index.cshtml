@@ -1,0 +1,29 @@
+
+@model IEnumerable<DashboardDaiNam.Models.UserModel>
+
+<h2>Danh sách người dùng</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Tên</th>
+        <th>Email</th>
+        <th>Vai trò</th>
+        <th>Ngày tạo</th>
+    </tr>
+    </thead>
+    <tbody>
+ 
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Ten</td> <!-- ✅ đúng -->
+                <td>@user.Email</td> <!-- ✅ đúng -->
+                <td>@user.VaiTro</td> <!-- ✅ đúng -->
+                <td>@user.NgayTao.ToString("dd/MM/yyyy")</td> <!-- ✅ đúng -->
+            </tr>
+        }
+
+    }
+    </tbody>
+</table>

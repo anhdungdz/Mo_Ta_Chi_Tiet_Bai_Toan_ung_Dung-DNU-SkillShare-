@@ -1,0 +1,17 @@
+@model DashboardDaiNam.Models.User
+@{
+    ViewData["Title"] = "Trang người dùng";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Xin chào, @Model.Name!</h2>
+
+    <div class="card shadow p-4">
+        <h5>Thông tin cá nhân</h5>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Vai trò:</strong> @Model.Role</p>
+
+        <a href="/User/SharePost" class="btn btn-success mt-3">📢 Đăng bài cần giúp đỡ</a>
+        <a href="/Account/Logout" class="btn btn-outline-danger mt-3 ms-2">Đăng xuất</a>
+    </div>
+</div>
